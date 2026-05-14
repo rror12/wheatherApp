@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyCast | Modern Weather Dashboard</title>
+    <meta name="description" content="Get real-time weather updates with SkyCast, a premium weather dashboard.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- Use Phosphor Icons for a more modern look -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="weather-card">
+            <div class="search-container">
+                <input type="text" id="city-input" placeholder="Search for a city..." autocomplete="off">
+                <button class="search-btn" id="search-btn">
+                    <i class="ph ph-magnifying-glass"></i>
+                </button>
+            </div>
+
+            <div id="loading" class="loading-state">
+                <div class="loader"></div>
+                <p>Fetching weather data...</p>
+            </div>
+
+            <div id="error" class="error-message"></div>
+
+            <div id="weather-info" class="weather-info">
+                <h1 id="city-name" class="city-name">Bangalore</h1>
+                <p id="date" class="date">Thursday, 14 May 2026</p>
+                
+                <div class="temp-container">
+                    <img id="weather-icon" src="" alt="Weather Icon" class="weather-icon">
+                    <div id="temp" class="temperature">24°C</div>
+                </div>
+                
+                <p id="description" class="description">Partly Cloudy</p>
+
+                <div class="details-grid">
+                    <div class="detail-item">
+                        <div class="detail-label">Feels Like</div>
+                        <div id="feels-like" class="detail-value">26°C</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Humidity</div>
+                        <div id="humidity" class="detail-value">65%</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Wind Speed</div>
+                        <div id="wind-speed" class="detail-value">12 km/h</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Pressure</div>
+                        <div id="pressure" class="detail-value">1012 hPa</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="welcome-message" style="text-align: center; color: var(--text-secondary);">
+                <i class="ph ph-cloud-sun" style="font-size: 3rem; margin-bottom: 15px; display: block;"></i>
+                <p>Search for a city to see the weather</p>
+                <button id="location-btn" style="margin-top: 20px; background: transparent; border: 1px solid var(--card-border); color: white; padding: 8px 16px; border-radius: 12px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;">
+                    <i class="ph ph-map-pin"></i> Use My Location
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
