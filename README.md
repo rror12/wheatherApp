@@ -33,8 +33,9 @@ The project comes with a demo API key. However, for personal use, it is recommen
 Open the `script.js` file and paste your key at the very top:
 ```javascript
 const key = 'YOUR_API_KEY_HERE';
+```
 
-#### 4. CRun the project
+#### 4. Run the project
 Direct open index.html by using start index.html
 Local server : php -S localhost:3000
 
